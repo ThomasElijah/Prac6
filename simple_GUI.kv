@@ -1,0 +1,29 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: 'Check'
+            size_hint_x: None
+            width: 75
+            on_press: app.check_result(int(input_result.text))
+
+        TextInput:
+            id: input_result
+            text: 'Enter your result'
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: 'Clear'
+            on_press: app.clear_input()
+            size_hint_x: None
+            width: 75
+        Label:
+            id: output_mark
+            text: ''
+            color: 0,1,0,1
+
+
+
+
