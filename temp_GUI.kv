@@ -1,0 +1,29 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: temp_input
+            text: 'Enter a variable'
+            color: 0,1,0,1
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: None
+            width: 75
+            Button:
+                text: 'F to C'
+                on_press: app.convert_temp('F',int(temp_input.text))
+            Button:
+                text: 'C to F'
+                on_press: app.convert_temp('C',int(temp_input.text))
+    BoxLayout
+        orientation: 'horizontal'
+        Label:
+            id: converted_temp
+            text: ''
+        Button:
+            text: 'Clear'
+            size_hint_x: None
+            width: 75
+            on_press: app.clear_fields()
